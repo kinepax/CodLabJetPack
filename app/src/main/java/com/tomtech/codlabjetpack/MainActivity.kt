@@ -41,10 +41,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CodLabJetPackTheme {
-                MyApp(modifier = Modifier.fillMaxSize())
-
-            }
+//            CodLabJetPackTheme {
+//                MyApp(modifier = Modifier.fillMaxSize())
+//
+//            }
+            AppNavigation()
         }
     }
 }
@@ -127,6 +128,10 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 Text(text = name , style = MaterialTheme.typography.headlineMedium.copy(
                     fontWeight = FontWeight.ExtraBold
                 ))
+                if(expanded){
+                    Text(text = ("Lorem ipsum color jetpack compose"+
+                    "paddin bouncy").repeat(4))
+                }
 
             }
 
